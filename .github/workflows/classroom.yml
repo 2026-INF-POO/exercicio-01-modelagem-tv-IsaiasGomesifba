@@ -1,0 +1,222 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Bloco de Testes Individuais (5 a 100)
+      - name: n5
+        id: n5
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n5
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 5 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n10
+        id: n10
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n10
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 10 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n15
+        id: n15
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n15
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 15 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n20
+        id: n20
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n20
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 20 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n25
+        id: n25
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n25
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 25 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n30
+        id: n30
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n30
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 30 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n35
+        id: n35
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n35
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 35 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n40
+        id: n40
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n40
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 40 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n45
+        id: n45
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n45
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 45 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n50
+        id: n50
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n50
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 50 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n55
+        id: n55
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n55
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 55 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n60
+        id: n60
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n60
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 60 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n65
+        id: n65
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n65
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 65 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n70
+        id: n70
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n70
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 70 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n75
+        id: n75
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n75
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 75 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n80
+        id: n80
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n80
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 80 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n85
+        id: n85
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n85
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 85 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n90
+        id: n90
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n90
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 90 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n95
+        id: n95
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n95
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 95 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      - name: n100
+        id: n100
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: n100
+          command: NOTA=$(cat .github/workflows/grade.txt | tr -d '[:space:]'); if [ "$NOTA" -ge 100 ]; then exit 0; else exit 1; fi
+          timeout: 2
+          max-score: 5
+
+      # Consolidador Final do Relatório CSV
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          N5_RESULTS: "${{ steps.n5.outputs.result }}"
+          N10_RESULTS: "${{ steps.n10.outputs.result }}"
+          N15_RESULTS: "${{ steps.n15.outputs.result }}"
+          N20_RESULTS: "${{ steps.n20.outputs.result }}"
+          N25_RESULTS: "${{ steps.n25.outputs.result }}"
+          N30_RESULTS: "${{ steps.n30.outputs.result }}"
+          N35_RESULTS: "${{ steps.n35.outputs.result }}"
+          N40_RESULTS: "${{ steps.n40.outputs.result }}"
+          N45_RESULTS:  ${{ steps.n45.outputs.result }}"
+          N50_RESULTS: "${{ steps.n50.outputs.result }}"
+          N55_RESULTS: "${{ steps.n55.outputs.result }}"
+          N60_RESULTS: "${{ steps.n60.outputs.result }}"
+          N65_RESULTS: "${{ steps.n65.outputs.result }}"
+          N70_RESULTS: "${{ steps.n70.outputs.result }}"
+          N75_RESULTS: "${{ steps.n75.outputs.result }}"
+          N80_RESULTS: "${{ steps.n80.outputs.result }}"
+          N85_RESULTS: "${{ steps.n85.outputs.result }}"
+          N90_RESULTS: "${{ steps.n90.outputs.result }}"
+          N95_RESULTS: "${{ steps.n95.outputs.result }}"
+          N100_RESULTS: "${{ steps.n100.outputs.result }}"
+        with:
+          runners: n5,n10,n15,n20,n25,n30,n35,n40,n45,n50,n55,n60,n65,n70,n75,n80,n85,n90,n95,n100
